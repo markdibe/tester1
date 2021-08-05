@@ -15,7 +15,7 @@ namespace tester1.Data
 
         }
 
-        public virtual DbSet<AccountTypeVM> AccountTypes { get; set; }
+        public virtual DbSet<AccountType> AccountTypes { get; set; }
         public virtual DbSet<Assesment> Assesments { get; set; }
         public virtual DbSet<CategoriesByUser> CategoriesByUsers { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
@@ -30,7 +30,9 @@ namespace tester1.Data
         public virtual DbSet<PatientProgramsExercise> PatientProgramsExercises { get; set; }
         public virtual DbSet<PatientsMoodScale> PatientsMoodScales { get; set; }
         public virtual DbSet<PatientsPainScale> PatientsPainScales { get; set; }
-        public virtual DbSet<Scale> Scales { get; set; }
+        public virtual DbSet<PatientPainInfo> PatientPainInfos { get; set; }
+        public virtual DbSet<PatientPainLocation> PatientPainLocations { get; set; }
+
         public virtual DbSet<SleepingPosition> SleepingPositions { get; set; }
         public virtual DbSet<SleepingQuantity> SleepingQantities { get; set; }
         public virtual DbSet<SleepingQuality> SleepingQualities { get; set; }

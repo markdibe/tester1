@@ -12,12 +12,12 @@ namespace tester1.Models
         [Key]
         public int PatientPainScaleId { get; set; }
 
-        [ForeignKey(nameof(Patient))]
-        public string PatientId { get; set; }
-        public int? PainScaleId { get; set; }
+        [ForeignKey(nameof(Assesment))]
+        public int AssesmentId { get; set; }
         public DateTime? Date { get; set; }
 
-        public virtual Scale PainScale { get; set; }
-        public virtual ApplicationUser Patient { get; set; }
+        [Range(1,10)]
+        public int PainScale { get; set; }
+        public virtual Assesment Assesment { get; set; }
     }
 }

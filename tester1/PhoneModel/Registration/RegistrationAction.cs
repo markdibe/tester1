@@ -15,9 +15,9 @@ namespace tester1.PhoneModel.Registration
         {
             _context = context;
         }
-        public async Task <ApplicationUser> AddUpdateFullName(Registration1PM registration1PM)
+        public async Task<ApplicationUser> AddUpdateFullName(Registration1PM registration1PM)
         {
-            if(string.IsNullOrEmpty(registration1PM.UserId))
+            if (string.IsNullOrEmpty(registration1PM.UserId))
             {
                 ApplicationUser user = new ApplicationUser() { Name = registration1PM.FullName };
                 await _context.ApplicationUsers.AddAsync(user);
@@ -31,7 +31,7 @@ namespace tester1.PhoneModel.Registration
                 _context.SaveChanges();
                 return user;
             }
-           
+
         }
 
         public async Task<Registration1PM> GetFullName(string UserId)
@@ -54,7 +54,7 @@ namespace tester1.PhoneModel.Registration
                 var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == reg.UserId);
                 user.Country = reg.Country;
                 _context.SaveChanges();
-              
+
             }
             return reg;
         }
@@ -78,8 +78,8 @@ namespace tester1.PhoneModel.Registration
                 user.Gender = reg3pm.Gender;
                 _context.SaveChanges();
             }
-             return reg3pm;
-            
+            return reg3pm;
+
         }
 
         public async Task<Registration3PM> GetGender(string UserId)
@@ -91,8 +91,65 @@ namespace tester1.PhoneModel.Registration
 
             }
             return new Registration3PM();
-
         }
+
+        public async Task<Registration4PM> AddUpdateDOB(Registration4PM registration)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == registration.UserId);
+            if (user != null)
+            {
+                user.Dob = registration.DateOfBirth;
+            }
+            await _context.SaveChangesAsync();
+            return registration;
+        }
+
+        public async Task<Registration4PM> GetDateOfBirth(string UserId)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == UserId);
+            return new Registration4PM { DateOfBirth = (DateTime)user.Dob, UserId = user.Id };
+        }
+
+
+
+
+        public async Task<Registration5PM> AddUpdateHeight(Registration5PM registration)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == registration.UserId);
+            if (user != null)
+            {
+                user.Height = registration.Height;
+            }
+            await _context.SaveChangesAsync();
+            return registration;
+        }
+
+        public async Task<Registration5PM> GetHeight(string UserId)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == UserId);
+            return new Registration5PM { Height =(int)user.Height, UserId = user.Id };
+        }
+
+
+        public async Task<Registration6PM> AddUpdateWeight(Registration6PM registration)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == registration.UserId);
+            if (user != null)
+            {
+                user.Weight= registration.Weight;
+            }
+            await _context.SaveChangesAsync();
+            return registration;
+        }
+
+        public async Task<Registration6PM> GetWeight(string UserId)
+        {
+            var user = await _context.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == UserId);
+            return new Registration6PM { Weight = (int)user.Weight, UserId = user.Id };
+        }
+
+
+
 
 
 

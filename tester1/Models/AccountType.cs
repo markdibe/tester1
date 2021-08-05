@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace tester1.Models
 {
-    public partial class AccountTypeVM
+    public partial class AccountType
     {
-        public AccountTypeVM()
+        public AccountType()
         {
             Users = new HashSet<ApplicationUser>();
         }

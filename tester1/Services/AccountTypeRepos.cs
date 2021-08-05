@@ -8,7 +8,7 @@ using tester1.Models;
 
 namespace tester1.Services
 {
-    public class AccountTypeRepos : GenericRepos<AccountTypeVM> , IAccountTypeRepos
+    public class AccountTypeRepos : GenericRepos<AccountType> , IAccountTypeRepos
     {
         public AccountTypeRepos(ApplicationDbContext context) : base(context)
         {

@@ -17,7 +17,9 @@ namespace tester1.Models
         public int? MoodScaleId { get; set; }
         public DateTime? Date { get; set; }
 
-        public virtual Scale MoodScale { get; set; }
+        
+        [Range(1,5)]
+        public int Scale { get; set; }
         public virtual ApplicationUser Patient { get; set; }
     }
 }

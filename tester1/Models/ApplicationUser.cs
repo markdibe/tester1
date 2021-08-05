@@ -35,12 +35,12 @@ namespace tester1.Models
         public bool? IsActivated { get; set; }
         public int? ParentId { get; set; }
         public string Gender { get; set; }
-        public decimal? Weight { get; set; }
-        public decimal? Height { get; set; }
+        public int? Weight { get; set; }
+        public int? Height { get; set; }
         public decimal? Bmi { get; set; }
         public string DominantHand { get; set; }
 
-        public virtual AccountTypeVM AccountType { get; set; }
+        public virtual AccountType AccountType { get; set; }
 
 
         public virtual ICollection<Assesment> AssesmentPatients { get; set; }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TOUR_US.DAL.Models;
+using tester1.Models;
 
 namespace TOUR_US.DAL.Validations
 {

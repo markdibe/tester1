@@ -6,7 +6,7 @@ using tester1.Models;
 
 namespace tester1.IServices
 {
-    public interface IAccountTypeRepos : IGenericRepos<AccountTypeVM>
+    public interface IAccountTypeRepos : IGenericRepos<AccountType>
     {
     }
 }

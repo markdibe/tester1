@@ -23,7 +23,7 @@ namespace tester1
         IPatientProgramsExerciseRepos PatientProgramsExerciseRepos { get; }
         IPatientsMoodScaleRepos PatientsMoodScaleRepos { get; }
         IPatientsPainScaleRepos PatientsPainScaleRepos { get; }
-        IScaleRepos ScaleRepos { get; }
+        
         ISleepingPositionRepos SleepingPositionRepos { get; }
         ISleepingQualityRepos SleepingQualityRepos { get; }
         ISleepingQuantityRepos SleepingQuantityRepos { get; }

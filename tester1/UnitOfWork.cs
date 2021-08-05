@@ -34,7 +34,7 @@ namespace tester1
         private IPatientsMoodScaleRepos patientsMoodScaleRepos ;
         private IPatientProgramsExerciseRepos patientProgramsExerciseRepos ;
         private IPatientsPainScaleRepos patientsPainScaleRepos ;
-        private IScaleRepos scaleRepos ;
+        
         private ISleepingPositionRepos sleepingPositionRepos ;
         private ISleepingQuantityRepos sleepingQuantityRepos ;
         private ISleepingQualityRepos sleepingQualityRepos ;
@@ -82,7 +82,7 @@ namespace tester1
 
         public IPatientsPainScaleRepos PatientsPainScaleRepos => patientsPainScaleRepos ?? new PatientPainScaleRepos(_context);
 
-        public IScaleRepos ScaleRepos => scaleRepos ?? new ScaleRepos(_context);
+        
 
         public ISleepingPositionRepos SleepingPositionRepos => sleepingPositionRepos ?? new SleepingPositionRepos(_context);
 
